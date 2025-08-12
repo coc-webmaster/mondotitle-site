@@ -1,24 +1,26 @@
+/* Color Palette */
+:root {
+  --primary-color: #0779e4; /* A professional blue for highlights and buttons */
+  --accent-color: #F8B400; /* A contrasting color for accents */
+  --light-color: #f4f4f4; /* A light gray for backgrounds */
+  --dark-color: #333; /* A dark gray for text and headers */
+  --text-color: #444; /* A slightly lighter gray for body text */
+}
+
 /* Core Typography & Layout */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    font-size: 16px; /* Base font size for readability */
-}
-
-.container {
-    width: 90%; /* Use a percentage for responsive width */
-    max-width: 1200px; /* Prevent it from getting too wide on large screens */
-    margin: auto;
-    overflow: hidden;
+    background-color: var(--light-color); /* Use the new color variable */
+    color: var(--text-color); /* Use the new color variable */
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Georgia', serif;
-    color: #222;
+    color: var(--dark-color); /* Use the new color variable */
     margin-top: 20px;
     margin-bottom: 10px;
 }
