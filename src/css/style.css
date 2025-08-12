@@ -1,3 +1,62 @@
+/* General Navigation Styles */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Mobile-specific styles for the hamburger menu */
+.hamburger-menu {
+    display: none; /* Hidden by default on desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger-menu .bar {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .hamburger-menu {
+        display: flex; /* Show the hamburger on small screens */
+    }
+
+    .main-nav {
+        display: none; /* Hide the main navigation by default on small screens */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--dark-color);
+    }
+
+    .main-nav.active {
+        display: block; /* Show the navigation when the hamburger is clicked */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 /* Header & Navigation */
 header {
     background: var(--dark-color);
