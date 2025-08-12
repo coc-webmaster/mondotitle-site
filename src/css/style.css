@@ -39,7 +39,7 @@ p {
 /* Header & Navigation */
 header {
     background-color: var(--dark-color);
-    background-image: url('images/header_image-471x143.jpg');
+    background-image: url('/images/header_image-471x143.jpg');
     background-repeat: no-repeat;
     background-position: center center; /* This centers the image horizontally and vertically */
     background-size: cover; /* This scales the image to cover the entire header space */
