@@ -57,5 +57,15 @@
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+
+    <script>
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburgerMenu.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+    </script>
+    
 </body>
 </html>
