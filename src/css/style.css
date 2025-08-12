@@ -1,3 +1,68 @@
+/* Header & Navigation */
+header {
+    background: var(--dark-color);
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--primary-color);
+    text-align: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on small screens */
+}
+
+header .logo {
+    margin: 0;
+    font-size: 1.5em;
+    flex-grow: 1;
+    text-align: left;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex; /* Makes the list horizontal */
+    flex-grow: 1;
+    justify-content: flex-end; /* Pushes the links to the right */
+}
+
+header nav li {
+    padding: 0 15px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive adjustments for the navigation on smaller screens */
+@media (max-width: 600px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    header nav ul {
+        justify-content: center;
+    }
+}
+
 /* Color Palette */
 :root {
   --primary-color: #0779e4; /* A professional blue for highlights and buttons */
