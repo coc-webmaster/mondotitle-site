@@ -145,25 +145,37 @@ nav.main-nav a:hover {
     list-style: none;
     padding: 0;
     margin-top: 20px;
+    display: flex; /* Use Flexbox to arrange items */
+    flex-wrap: wrap; /* Allows items to wrap to a new line */
+    gap: 20px; /* Creates space between the buttons */
 }
 
 .resource-list li {
-    background-color: #fff;
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 8px;
+    flex: 1 1 30%; /* Distributes items into roughly three columns */
+    margin-bottom: 0; /* Remove bottom margin since we're using gap */
+    background-color: var(--primary-color); /* Button background color */
+    border-radius: 8px; /* Rounded corners for button look */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .resource-list li a {
     text-decoration: none;
     font-weight: bold;
-    color: var(--primary-color);
+    color: #fff; /* White text color */
     display: block; /* Make the entire list item clickable */
+    padding: 20px; /* Increase padding for a better button feel */
+    text-align: center;
 }
 
 .resource-list li a:hover {
-    color: var(--dark-color);
+    background-color: var(--dark-color); /* Darker color on hover */
+}
+
+/* Media query to handle the layout on smaller screens */
+@media (max-width: 768px) {
+    .resource-list li {
+        flex: 1 1 100%; /* Items take full width on smaller screens */
+    }
 }
 
 /* Media Queries for Responsiveness */
