@@ -46,6 +46,7 @@ header {
     color: #fff;
     padding: 1rem 0;
     border-bottom: 3px solid var(--primary-color);
+    min-height: 150px;
 }
 
 header .container {
@@ -189,4 +190,12 @@ nav.main-nav a:hover {
     .office-img {
         max-width: 100%;
     }
+}
+
+footer {
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--dark-color);
+    color: #fff;
+    text-align: center;
 }
