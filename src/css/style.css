@@ -1,0 +1,57 @@
+/* Core Typography & Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px; /* Base font size for readability */
+}
+
+.container {
+    width: 90%; /* Use a percentage for responsive width */
+    max-width: 1200px; /* Prevent it from getting too wide on large screens */
+    margin: auto;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    color: #222;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Header & Footer */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+    text-align: center; /* Center the header content */
+}
+
+footer {
+    padding: 20px;
+    margin-top: 40px; /* Add more space above the footer */
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+}
+
+/* Basic Responsive adjustments for small screens */
+@media(max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2em; /* Smaller headings on mobile */
+    }
+}
