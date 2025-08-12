@@ -34,6 +34,11 @@ nav ul li a {
 }
 
 @media (max-width: 600px) {
+    header .container {
+        flex-direction: row; /* Keep logo and hamburger on one line */
+        justify-content: space-between;
+    }
+
     .hamburger-menu {
         display: flex; /* Show the hamburger on small screens */
     }
@@ -41,10 +46,11 @@ nav ul li a {
     .main-nav {
         display: none; /* Hide the main navigation by default on small screens */
         position: absolute;
-        top: 70px;
+        top: 70px; /* Position it below the header */
         left: 0;
         width: 100%;
-        background: var(--dark-color);
+        background-color: var(--dark-color); /* Add a background color */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
     .main-nav.active {
@@ -54,6 +60,7 @@ nav ul li a {
     .main-nav ul {
         flex-direction: column;
         text-align: center;
+        padding: 0;
     }
 }
 
