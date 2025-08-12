@@ -1,20 +1,100 @@
-/* General Navigation Styles */
-nav ul {
+/* Color Palette */
+:root {
+  --primary-color: #0779e4; /* A professional blue for highlights and buttons */
+  --accent-color: #F8B400; /* A contrasting color for accents */
+  --light-color: #f4f4f4; /* A light gray for backgrounds */
+  --dark-color: #333; /* A dark gray for text and headers */
+  --text-color: #444; /* A slightly lighter gray for body text */
+}
+
+/* Core Typography & Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    color: var(--dark-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header & Navigation */
+header {
+    background: var(--dark-color);
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.logo-img {
+    max-width: 150px;
+    height: auto;
+}
+
+.tagline {
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #ccc;
+    text-align: center;
+}
+
+nav.main-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
 }
 
-nav ul li a {
+nav.main-nav li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
     padding: 10px 15px;
     display: block;
 }
 
-/* Mobile-specific styles for the hamburger menu */
+nav.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Hamburger Menu */
 .hamburger-menu {
-    display: none; /* Hidden by default on desktop */
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     width: 2rem;
@@ -33,174 +113,39 @@ nav ul li a {
     border-radius: 10px;
 }
 
+/* Mobile-specific styles */
 @media (max-width: 600px) {
     header .container {
-        flex-direction: row; /* Keep logo and hamburger on one line */
+        flex-direction: row;
         justify-content: space-between;
-    }
-
-    .hamburger-menu {
-        display: flex; /* Show the hamburger on small screens */
-    }
-
-    .main-nav {
-        display: none; /* Hide the main navigation by default on small screens */
-        position: absolute;
-        top: 70px; /* Position it below the header */
-        left: 0;
-        width: 100%;
-        background-color: var(--dark-color); /* Add a background color */
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    .main-nav.active {
-        display: block; /* Show the navigation when the hamburger is clicked */
-    }
-
-    .main-nav ul {
-        flex-direction: column;
-        text-align: center;
-        padding: 0;
-    }
-}
-
-/* Header & Navigation */
-header {
-    background: var(--dark-color);
-    color: #fff;
-    padding: 1rem 0;
-    border-bottom: 3px solid var(--primary-color);
-    text-align: center;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allows items to wrap on small screens */
-}
-
-.logo-container {
-    text-align: center;
-    flex-grow: 1;
-}
-
-.logo-img {
-    max-width: 150px; /* Adjust the logo size as needed */
-    height: auto;
-}
-
-.tagline {
-    margin-top: 5px;
-    font-style: italic;
-    font-size: 0.9em;
-    color: #ccc;
-}
-
-header .logo {
-    margin: 0;
-    font-size: 1.5em;
-    flex-grow: 1;
-    text-align: left;
-}
-
-header nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex; /* Makes the list horizontal */
-    flex-grow: 1;
-    justify-content: flex-end; /* Pushes the links to the right */
-}
-
-header nav li {
-    padding: 0 15px;
-}
-
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.9em;
-}
-
-header nav a:hover {
-    color: var(--primary-color);
-}
-
-/* Responsive adjustments for the navigation on smaller screens */
-@media (max-width: 600px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
+        flex-wrap: nowrap;
     }
 
     .logo-container {
-        margin-bottom: 15px;
+        text-align: left;
     }
 
-    header nav ul {
-        justify-content: center;
-    }
-}
-
-/* Color Palette */
-:root {
-  --primary-color: #0779e4; /* A professional blue for highlights and buttons */
-  --accent-color: #F8B400; /* A contrasting color for accents */
-  --light-color: #f4f4f4; /* A light gray for backgrounds */
-  --dark-color: #333; /* A dark gray for text and headers */
-  --text-color: #444; /* A slightly lighter gray for body text */
-}
-
-/* Core Typography & Layout */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: var(--light-color); /* Use the new color variable */
-    color: var(--text-color); /* Use the new color variable */
-    font-size: 16px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Georgia', serif;
-    color: var(--dark-color); /* Use the new color variable */
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-p {
-    margin-bottom: 15px;
-}
-
-/* Header & Footer */
-header {
-    background: #333;
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #0779e4 3px solid;
-    text-align: center; /* Center the header content */
-}
-
-footer {
-    padding: 20px;
-    margin-top: 40px; /* Add more space above the footer */
-    color: #fff;
-    background-color: #333;
-    text-align: center;
-}
-
-/* Basic Responsive adjustments for small screens */
-@media(max-width: 600px) {
-    .container {
-        width: 95%;
+    .hamburger-menu {
+        display: flex;
     }
 
-    h1 {
-        font-size: 2em; /* Smaller headings on mobile */
+    nav.main-nav {
+        display: none;
+        position: absolute;
+        top: 80px; /* Position it below the header. Adjusted value based on padding. */
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-color);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav.main-nav.active {
+        display: block;
+    }
+
+    nav.main-nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
     }
 }
