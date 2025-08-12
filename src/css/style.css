@@ -92,6 +92,15 @@ nav.main-nav a:hover {
     color: var(--primary-color);
 }
 
+/* Footer */
+footer {
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--dark-color); /* Added a background color */
+    color: #fff;
+    text-align: center; /* This will center the text and other inline content */
+}
+
 /* Hamburger Menu */
 .hamburger-menu {
     display: none;
