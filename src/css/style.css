@@ -1,10 +1,10 @@
 /* Color Palette */
 :root {
-  --primary-color: #0779e4; /* A professional blue for highlights and buttons */
-  --accent-color: #F8B400; /* A contrasting color for accents */
-  --light-color: #f4f4f4; /* A light gray for backgrounds */
-  --dark-color: #333; /* A dark gray for text and headers */
-  --text-color: #444; /* A slightly lighter gray for body text */
+  --primary-color: #0779e4;
+  --accent-color: #F8B400;
+  --light-color: #f4f4f4;
+  --dark-color: #333;
+  --text-color: #444;
 }
 
 /* Core Typography & Layout */
@@ -38,7 +38,11 @@ p {
 
 /* Header & Navigation */
 header {
-    background: var(--dark-color);
+    background-color: var(--dark-color);
+    background-image: url('images/header_image-471x143.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
     color: #fff;
     padding: 1rem 0;
     border-bottom: 3px solid var(--primary-color);
@@ -71,19 +75,27 @@ header .container {
     text-align: center;
 }
 
-.header-img {
-    max-width: 250px;
-    height: auto;
-    margin-left: auto; /* Pushes the image to the right */
+/* Navigation Menu */
+nav.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
-/* Footer */
-footer {
-    padding: 20px;
-    margin-top: 40px;
-    background-color: var(--dark-color); /* Added a background color */
+nav.main-nav li a {
     color: #fff;
-    text-align: center; /* This will center the text and other inline content */
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav.main-nav a:hover {
+    color: var(--primary-color);
 }
 
 /* Hamburger Menu */
@@ -107,36 +119,42 @@ footer {
     border-radius: 10px;
 }
 
-/* Responsive adjustments for the navigation on smaller screens */
-@media (max-width: 600px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo-container {
-        margin-bottom: 15px;
-    }
-
-    .header-img {
-        display: none; /* Hide this image on mobile to save space */
-    }
-
-    header nav ul {
-        justify-content: center;
-    }
+/* Homepage specific styles */
+.content-with-image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
 }
 
-/* Mobile-specific styles */
+.office-img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.content-with-image p {
+    flex: 1;
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 600px) {
+    /* Header and Navigation adjustments */
+    header {
+        background-image: none; /* Hide image on mobile */
+    }
+
     header .container {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: nowrap;
+        align-items: center;
     }
 
     .logo-container {
-        text-align: left;
+        flex-grow: 0;
     }
 
     .hamburger-menu {
@@ -146,7 +164,7 @@ footer {
     nav.main-nav {
         display: none;
         position: absolute;
-        top: 80px; /* Position it below the header. Adjusted value based on padding. */
+        top: 80px;
         left: 0;
         width: 100%;
         background-color: var(--dark-color);
@@ -162,35 +180,13 @@ footer {
         text-align: center;
         padding: 0;
     }
-}
 
-/* Homepage specific styles */
-.content-with-image {
-    display: flex; /* Use Flexbox for layout */
-    flex-wrap: wrap; /* Allow items to wrap to a new line on smaller screens */
-    gap: 20px; /* Adds space between the image and the text */
-    align-items: flex-start; /* Aligns items to the top */
-    margin-top: 20px;
-}
-
-.office-img {
-    max-width: 40%; /* Image takes up to 40% of the container width */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.content-with-image p {
-    flex: 1; /* Allows the paragraph to take up the remaining space */
-}
-
-@media(max-width: 768px) {
+    /* Homepage content adjustments */
     .content-with-image {
-        flex-direction: column; /* Stacks the image and text on small screens */
+        flex-direction: column;
     }
 
     .office-img {
-        max-width: 100%; /* Image takes full width on small screens */
-        margin-bottom: 10px;
+        max-width: 100%;
     }
 }
