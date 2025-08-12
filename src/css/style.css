@@ -171,6 +171,39 @@ nav.main-nav a:hover {
     background-color: var(--dark-color); /* Darker color on hover */
 }
 
+/* Staff Page Styles */
+.staff-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.staff-member {
+    flex: 1 1 300px; /* Allows cards to be responsive and wrap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.staff-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.staff-title {
+    font-style: italic;
+    color: var(--text-color);
+}
+
 /* Media query to handle the layout on smaller screens */
 @media (max-width: 768px) {
     .resource-list li {
