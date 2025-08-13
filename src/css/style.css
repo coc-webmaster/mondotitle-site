@@ -289,6 +289,14 @@ nav.main-nav a:hover {
     }
 }
 
+/* --- FAQs Page --- */
+/* Makes the question part of the accordion bold and look clickable */
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5em 0; /* Adds a little vertical spacing */
+}
+
 /* Footer */
 footer {
     padding: 20px;
