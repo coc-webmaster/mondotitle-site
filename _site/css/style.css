@@ -1,0 +1,299 @@
+/* Color Palette */
+:root {
+  --primary-color: #0779e4;
+  --accent-color: #F8B400;
+  --light-color: #f4f4f4;
+  --dark-color: #333;
+  --text-color: #444;
+}
+
+/* Core Typography & Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    color: var(--dark-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5rem; /* Larger font size for the most important heading */
+    font-weight: 700; /* Bold font weight */
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem; /* A distinct, smaller size for secondary headings */
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.5rem; /* Even smaller for sub-headings */
+    font-weight: 600;
+}
+
+@media(max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--dark-color);
+    background-image: url('/images/header_image-471x143.jpg');
+    background-repeat: no-repeat;
+    background-position: center center; /* This centers the image horizontally and vertically */
+    background-size: cover; /* This scales the image to cover the entire header space */
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--primary-color);
+    min-height: 150px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img {
+    max-width: 150px;
+    height: auto;
+}
+
+.tagline {
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #ccc;
+    text-align: center;
+}
+
+/* Navigation Menu */
+nav.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav.main-nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger-menu .bar {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+}
+
+/* Homepage specific styles */
+.content-with-image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.office-img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.content-with-image p {
+    flex: 1;
+}
+
+/* Resources Page List Styles */
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex; /* Use Flexbox to arrange items */
+    flex-wrap: wrap; /* Allows items to wrap to a new line */
+    gap: 20px; /* Creates space between the buttons */
+}
+
+.resource-list li {
+    flex: 1 1 30%; /* Distributes items into roughly three columns */
+    margin-bottom: 0; /* Remove bottom margin since we're using gap */
+    background-color: var(--primary-color); /* Button background color */
+    border-radius: 8px; /* Rounded corners for button look */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.resource-list li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff; /* White text color */
+    display: block; /* Make the entire list item clickable */
+    padding: 20px; /* Increase padding for a better button feel */
+    text-align: center;
+}
+
+.resource-list li a:hover {
+    background-color: var(--dark-color); /* Darker color on hover */
+}
+
+/* Staff Page Styles */
+.staff-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.staff-member {
+    flex: 1 1 300px; /* Allows cards to be responsive and wrap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.staff-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.staff-title {
+    font-style: italic;
+    color: var(--text-color);
+}
+
+/* Media query to handle the layout on smaller screens */
+@media (max-width: 768px) {
+    .resource-list li {
+        flex: 1 1 100%; /* Items take full width on smaller screens */
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    /* Header and Navigation adjustments */
+    header {
+        background-image: none; /* Hide image on mobile */
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .logo-container {
+        flex-grow: 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav.main-nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-color);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav.main-nav.active {
+        display: block;
+    }
+
+    nav.main-nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    /* Homepage content adjustments */
+    .content-with-image {
+        flex-direction: column;
+    }
+
+    .office-img {
+        max-width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--dark-color);
+    color: #fff;
+    text-align: center;
+}
