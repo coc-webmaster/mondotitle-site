@@ -166,6 +166,80 @@ nav.main-nav a:hover {
     flex: 1;
 }
 
+/* --- Home Page CTA Section --- */
+#home-cta {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.primary-cta-container {
+    margin-bottom: 40px;
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+    background-color: var(--dark-color);
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 280px; /* Ensures cards don't get too squished */
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.card p {
+    flex-grow: 1; /* Makes sure the button aligns to the bottom */
+}
+
+.button-secondary {
+    background-color: var(--dark-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px; /* Adds space above the button */
+    transition: background-color 0.3s ease;
+}
+
+.button-secondary:hover {
+    background-color: var(--primary-color);
+}
+
+/* Make cards stack on mobile */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+    }
+}
+
 /* Resources Page List Styles */
 .resource-list {
     list-style: none;
