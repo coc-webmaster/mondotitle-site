@@ -172,11 +172,23 @@ nav.main-nav a:hover {
     text-align: center;
 }
 
-.primary-cta-container {
-    /* Centering the button */
-    text-align: center;
-    /* Spacing it before the content below */
-    margin-bottom: 40px; 
+/* --- Hero Header & Primary CTA --- */
+.hero-header {
+    display: flex;
+    align-items: center; /* Vertically aligns the text and button */
+    justify-content: space-between; /* Pushes them to opposite sides */
+    gap: 30px; /* Adds space between the text and button */
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1; /* Allows the text to take up available space */
+    min-width: 300px;
+}
+
+.hero-cta {
+    flex-shrink: 0; /* Prevents the button from shrinking */
 }
 
 .button-primary {
@@ -186,14 +198,28 @@ nav.main-nav a:hover {
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 8px; /* This ensures all corners are rounded */
+    border-radius: 8px;
     transition: background-color 0.3s ease;
-    display: inline-block; /* Helps with applying margin */
-    margin-top: 20px; /* This is the key fix for the "flat top" look */
+    display: inline-block;
+    text-align: center;
 }
 
 .button-primary:hover {
     background-color: var(--dark-color);
+}
+
+
+/* --- Responsive stacking for the hero header --- */
+@media (max-width: 768px) {
+    .hero-header {
+        flex-direction: column; /* Stacks the items vertically */
+        align-items: stretch; /* Makes items full-width */
+        text-align: center;
+    }
+
+    .hero-cta {
+        margin-top: 20px; /* Adds space above the button on mobile */
+    }
 }
 
 .card-container {
