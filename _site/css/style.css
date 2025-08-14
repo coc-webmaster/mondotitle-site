@@ -178,6 +178,7 @@ nav.main-nav a:hover {
     align-items: center; /* Vertically aligns the text and button */
     justify-content: space-between; /* Pushes them to opposite sides */
     gap: 30px; /* Adds space between the text and button */
+    margin-top: 20px;
     margin-bottom: 40px;
     flex-wrap: wrap;
 }
