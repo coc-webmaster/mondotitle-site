@@ -272,35 +272,39 @@ nav.main-nav a:hover {
     }
 }
 
-/* Resources Page List Styles */
+/* --- Resources Page List Styles --- */
 .resource-list {
     list-style: none;
     padding: 0;
     margin-top: 20px;
-    display: flex; /* Use Flexbox to arrange items */
-    flex-wrap: wrap; /* Allows items to wrap to a new line */
-    gap: 20px; /* Creates space between the buttons */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .resource-list li {
-    flex: 1 1 30%; /* Distributes items into roughly three columns */
-    margin-bottom: 0; /* Remove bottom margin since we're using gap */
-    background-color: var(--primary-color); /* Button background color */
-    border-radius: 8px; /* Rounded corners for button look */
+    flex: 1 1 30%;
+    margin-bottom: 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px; /* Keep this on the parent for the shadow */
+    display: flex; /* Helps the link fill the space */
 }
 
 .resource-list li a {
+    background-color: var(--primary-color); /* Moved from li */
+    border-radius: 8px; /* Moved from li */
     text-decoration: none;
     font-weight: bold;
-    color: #fff; /* White text color */
-    display: block; /* Make the entire list item clickable */
-    padding: 20px; /* Increase padding for a better button feel */
+    color: #fff;
+    display: block;
+    padding: 20px;
     text-align: center;
+    width: 100%; /* Ensures link fills the li */
+    transition: background-color 0.3s ease; /* Add for smooth hover */
 }
 
 .resource-list li a:hover {
-    background-color: var(--dark-color); /* Darker color on hover */
+    background-color: var(--dark-color);
 }
 
 /* Staff Page Styles */
