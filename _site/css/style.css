@@ -173,7 +173,10 @@ nav.main-nav a:hover {
 }
 
 .primary-cta-container {
-    margin-bottom: 40px;
+    /* Centering the button */
+    text-align: center;
+    /* Spacing it before the content below */
+    margin-bottom: 40px; 
 }
 
 .button-primary {
@@ -183,8 +186,10 @@ nav.main-nav a:hover {
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 8px; /* This ensures all corners are rounded */
     transition: background-color 0.3s ease;
+    display: inline-block; /* Helps with applying margin */
+    margin-top: 20px; /* This is the key fix for the "flat top" look */
 }
 
 .button-primary:hover {
