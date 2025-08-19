@@ -1,7 +1,7 @@
 /* Color Palette */
 :root {
-  --primary-color: #0779e4;
-  --accent-color: #F8B400;
+  --primary-color: #005961; /* Dark Teal from Logo */
+  --accent-color: #009BAA;  /* Lighter Turquoise from Logo */
   --light-color: #f4f4f4;
   --dark-color: #333;
   --text-color: #444;
@@ -65,7 +65,7 @@ p {
 /* Header & Navigation */
 header {
     background-color: var(--dark-color);
-    background-image: url('/images/header_image-471x143.jpg');
+    background-image: url('/images/bk-header-river.jpg');
     background-repeat: no-repeat;
     background-position: center center; /* This centers the image horizontally and vertically */
     background-size: cover; /* This scales the image to cover the entire header space */
@@ -73,6 +73,7 @@ header {
     padding: 1rem 0;
     border-bottom: 3px solid var(--primary-color);
     min-height: 150px;
+    position: relative;
 }
 
 header .container {
@@ -80,6 +81,19 @@ header .container {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust 0.4 to make it darker or lighter */
+    z-index: 1;
 }
 
 .logo-container {
