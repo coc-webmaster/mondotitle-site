@@ -35,10 +35,44 @@
         
 <div class="container">
     <h1>Mortgage Calculator 🧮</h1>
-    <p>Our interactive mortgage calculator is under construction and will be available soon!</p>
-    <p>This tool will help you estimate your monthly mortgage payments and explore different loan scenarios to better understand your budget. Please check back shortly.</p>
-    <p>In the meantime, you can explore our <a href="/resources/">other resources</a> or <a href="/contact/">contact us</a> if you have any questions.</p>
+    <p>Use our free mortgage calculator to estimate your monthly mortgage payment, including principal and interest, taxes, and insurance. Simply enter the home price, your down payment, and the loan terms to get your estimate.</p>
+
+    <div class="calculator-container">
+        <div class="calculator-inputs">
+            <h3>Loan Details</h3>
+            
+            <label for="home-price">Home Price</label>
+            <input type="number" id="home-price" value="350000">
+
+            <label for="down-payment">Down Payment</label>
+            <input type="number" id="down-payment" value="70000">
+
+            <label for="loan-term">Loan Term (Years)</label>
+            <select id="loan-term">
+                <option value="30">30 Years</option>
+                <option value="20">20 Years</option>
+                <option value="15">15 Years</option>
+            </select>
+
+            <label for="interest-rate">Interest Rate (%)</label>
+            <input type="number" id="interest-rate" value="6.5" step="0.01">
+
+            <button id="calculate-btn" class="button-primary">Calculate</button>
+        </div>
+
+        <div class="calculator-results">
+            <h3>Estimated Monthly Payment</h3>
+            <div id="total-payment-display" class="total-payment">$0.00</div>
+            <div class="payment-breakdown">
+                <div id="pi-breakdown">Principal & Interest: <span>$0.00</span></div>
+                <div id="tax-breakdown">Property Taxes: <span>$0.00</span></div>
+                <div id="ins-breakdown">Home Insurance: <span>$0.00</span></div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script src="/js/calculator.js"></script>
     </main>
 
     <footer>
