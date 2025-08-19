@@ -146,6 +146,15 @@ nav.main-nav a:hover {
     border-radius: 10px;
 }
 
+/* Footer */
+footer {
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--dark-color);
+    color: #fff;
+    text-align: center;
+}
+
 /* Homepage specific styles */
 .content-with-image {
     display: flex;
@@ -457,11 +466,71 @@ dd {
     text-align: center;
 }
 
-/* Footer */
-footer {
-    padding: 20px;
-    margin-top: 40px;
-    background-color: var(--dark-color);
-    color: #fff;
-    text-align: center;
+/* --- Mortgage Calculator Styles --- */
+.calculator-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+.calculator-inputs, .calculator-results {
+    flex: 1;
+    min-width: 300px;
+}
+
+.calculator-inputs h3, .calculator-results h3 {
+    margin-top: 0;
+    color: var(--dark-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.calculator-inputs label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.calculator-inputs input, .calculator-inputs select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#calculate-btn {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.total-payment {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+.payment-breakdown {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.payment-breakdown div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--light-color);
+}
+
+.payment-breakdown span {
+    font-weight: bold;
 }
