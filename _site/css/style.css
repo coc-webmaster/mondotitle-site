@@ -497,13 +497,15 @@ dd {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
     font-family: 'Arial', sans-serif;
+    box-sizing: border-box; /* <-- Add this line to fix the overflow */
 }
 
 /* --- Form Fieldset Styles --- */
