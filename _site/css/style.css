@@ -482,7 +482,8 @@ dd {
 
 /* --- Contact Form Styles --- */
 .contact-form {
-    margin: 30px 0;
+    max-width: 700px;   /* New: Sets a maximum width for the form */
+    margin: 30px auto;
 }
 
 .form-group {
