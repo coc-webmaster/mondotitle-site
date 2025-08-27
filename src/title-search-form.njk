@@ -1,23 +1,64 @@
 ---
 layout: "base.njk"
-title: "Title Search Form - Mon-Do Title Co Inc"
+title: "Title Search Request - Mon-Do Title Co Inc"
 ---
 
 <div class="container">
-    <h1>Title Search Request Form 📝</h1>
+    <h1>Title Search & Order Form 📝</h1>
+    <p>Please use this form to securely submit a new title search or open a title order. Fill in as much information as you have available, and one of our team members will contact you shortly to confirm the details.</p>
 
-    <p>Our secure online title search and order form is currently under development and will be available very soon.</p>
-    <p>This feature will allow you to easily and securely submit your title requests directly through our website.</p>
-    
-    <hr>
+    <form action="[PASTE_YOUR_POWER_AUTOMATE_URL_HERE]" method="POST" class="contact-form">
+        <input type="hidden" name="form_name" value="Title Order Form">
 
-    <h3>How to Start an Order Today</h3>
-    <p>In the meantime, we are ready to assist you immediately. You can open a title order by contacting us directly via phone or email. Please be ready to provide the property address and any relevant transaction details.</p>
-    
-    <ul>
-        <li><strong>Phone:</strong> (555) 123-4567</li>
-        <li><strong>Email:</strong> orders@example.com</li>
-    </ul>
-    
-    <p>You can also visit our <a href="/contact/">contact page</a> for our office location and business hours. We look forward to working with you!</p>
+        <fieldset>
+            <legend>Your Contact Information</legend>
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Your Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Property & Transaction Details</legend>
+            <div class="form-group">
+                <label for="property_address">Property Address</label>
+                <input type="text" id="property_address" name="property_address" required>
+            </div>
+            <div class="form-group">
+                <label for="transaction_type">Type of Transaction</label>
+                <select id="transaction_type" name="transaction_type">
+                    <option>Purchase</option>
+                    <option>Refinance</option>
+                    <option>Foreclosure</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="buyer_name">Buyer's Name(s)</label>
+                <input type="text" id="buyer_name" name="buyer_name">
+            </div>
+            <div class="form-group">
+                <label for="seller_name">Seller's Name(s)</label>
+                <input type="text" id="seller_name" name="seller_name">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+            <div class="form-group">
+                <label for="message">Additional Notes or Closing Details</label>
+                <textarea id="message" name="message" rows="6"></textarea>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="button-primary">Submit Title Request</button>
+    </form>
 </div>
