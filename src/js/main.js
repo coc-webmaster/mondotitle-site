@@ -10,15 +10,12 @@ if (hamburgerMenu && mainNav) {
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// --- Clear form fields when a user navigates back to a page ---
-window.addEventListener('pageshow', function(event) {
-  // The 'persisted' property is true if the page is loaded from the back-forward cache.
-  if (event.persisted) {
-    // Find all forms with the class 'contact-form'
-    const forms = document.querySelectorAll('.contact-form');
-    // Loop through them and reset each one.
-    forms.forEach(form => {
-      form.reset();
-    });
-  }
+// --- Clear form fields every time a page with a form loads ---
+window.addEventListener('load', function() {
+  // Find all forms with the class 'contact-form'
+  const forms = document.querySelectorAll('.contact-form');
+  // Loop through them and reset each one.
+  forms.forEach(form => {
+    form.reset();
+  });
 });
